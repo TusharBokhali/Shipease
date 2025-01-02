@@ -9,6 +9,7 @@ import 'react-native-reanimated';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import SingIn from '@/Screen/SingIn';
 import LogIn from '@/Screen/LogIn';
+import Verification from '@/Screen/Verification';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -33,9 +34,10 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack.Navigator screenOptions={{headerShown:false}}>
+      <Stack.Navigator screenOptions={{headerShown:false}} initialRouteName='SingUp'>
         <Stack.Screen name='SingUp' component={SingIn}/>
         <Stack.Screen name='LogIn' component={LogIn}/>
+        <Stack.Screen name='Verification' component={Verification}/>
       </Stack.Navigator>
     </ThemeProvider>
   );
