@@ -10,6 +10,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 import SingIn from '@/Screen/SingIn';
 import LogIn from '@/Screen/LogIn';
 import Verification from '@/Screen/Verification';
+import Tabbar from '@/Screen/Tabbar';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -34,10 +35,11 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack.Navigator screenOptions={{headerShown:false}} initialRouteName='SingUp'>
+      <Stack.Navigator screenOptions={{headerShown:false}} initialRouteName='Tabbar'>
         <Stack.Screen name='SingUp' component={SingIn}/>
         <Stack.Screen name='LogIn' component={LogIn}/>
         <Stack.Screen name='Verification' component={Verification}/>
+        <Stack.Screen name='Tabbar' component={Tabbar}/>
       </Stack.Navigator>
     </ThemeProvider>
   );
