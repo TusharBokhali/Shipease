@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Shipease",
+    "slug": "Shipease",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/App_Logo.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/App_Logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["android.permission.SCHEDULE_EXACT_ALARM"]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/App_Logo.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/App_Logo.png",
+          "imageWidth": 240,
+          "imageHeight": 135,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Shipease to use your location."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "dbd603df-0680-4c41-b99b-84aa5da82a81"
+      }
+    }
+  }
+}
